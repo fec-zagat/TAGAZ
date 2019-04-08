@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Restaurant Reviews - Tagaz</title>
+  </head>
+  <body>
+    <div id="NavSearchBar"></div>
+    <div id="PhotoCarousel"></div>
+    <div id="SideBarInfo"></div>
+    <div id="RelatedRestaurants"></div>
+    <script src="/lib/react.development.js"></script>
+    <script src="/lib/react-dom.development.js"></script>
+    <script src="http://localhost:3001/app.js"></script>
+    <script src="http://localhost:3002/app.js"></script>
+    <script src="http://localhost:3003/app.js"></script>
+    <script src="http://localhost:3004/app.js"></script>
+    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script>
+      ReactDOM.render(
+        React.createElement(Info),
+        document.getElementById('NavSearchBar')
+      );
+      ReactDOM.render(
+        React.createElement(CountDown),
+        document.getElementById('PhotoCarousel')
+      );
+      ReactDOM.render(
+        React.createElement(Related),
+        document.getElementById('SideBarInfo')
+      );
+      ReactDOM.render(
+        React.createElement(Reviews),
+        document.getElementById('RelatedRestaurants')
+      );
+    </script>
+  </body>
+</html>
